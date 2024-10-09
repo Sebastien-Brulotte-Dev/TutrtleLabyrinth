@@ -1,0 +1,7 @@
+mou 7
+sez 8 4
+ava 1
+fin
+tad
+ava 1
+fin

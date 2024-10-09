@@ -1,0 +1,21 @@
+sma 2
+s 4
+tad
+s 0
+ava 1
+sma 7
+s 9
+tad
+s 5
+ava 1
+sma 12
+s 14
+tad
+s 10
+ava 1
+sma 17
+s 19
+tad
+s 15
+ava 1
+fin

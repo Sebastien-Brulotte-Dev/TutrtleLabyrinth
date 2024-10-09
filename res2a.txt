@@ -1,0 +1,12 @@
+Entrez le nom du fichier contenant la description du Labyrinthe : lab2.txt
+Entrez le nom du fichier contenant le code RT-104 : prog2a.txt
+Entrez le numéro de colonne de départ pour la tortue : 1
+Entrez le numéro de ligne de départ pour la tortue : 2
+0 : ( 1, 2 ) Nord
+1 : ( 1, 2 ) Nord
+4 : ( 1, 2 ) Est
+5 : ( 2, 2 ) Est
+6 : ( 2, 2 ) Est
+Nombre instructions interprete : 5
+Nombre mouvement : 2
+Nombre collision : 0

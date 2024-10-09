@@ -1,13 +1,29 @@
-import java.util.Scanner;
+import java.io.IOException;
+import java.util.*;
 
 public class Program {
 
-    public int lineNumber;
-    public Command[] commandList;
+    protected ArrayList<Command> commandList;
 
-    public static Program read(Scanner scanner){
+    public Program(ArrayList<Command> commandList){
+        this.commandList = commandList;
+    }
 
+    public static Program read(Scanner commandsFile)throws Exception {
 
-        return new Program();
+        ArrayList<Command> commandList = new ArrayList<>();
+
+        int i = 0;
+
+        while(commandsFile.hasNext()) {
+
+            String nextCommandStatement = Lecteurs.lireCommande(commandsFile);
+//            System.out.println(i + " : " + nextCommandStatement + "\n");
+            Command nextCommand = new Command(i, nextCommandStatement);
+            commandList.add(nextCommand);
+            ++i;
+        }
+
+        return new Program(commandList);
     }
 }
