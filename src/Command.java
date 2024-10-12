@@ -1,16 +1,24 @@
 public class Command {
-    String command;
     int commandNumber;
-    public int commandModifier;
+    String command;
+    public int commandImm;
+    public int commandEtiq;
 
-    public Command(int commandNumber, String command, int commandModifier) {
-        this.command = command;
-        this.commandModifier = commandModifier;
-        this.commandNumber = commandNumber;
-    }
     public Command(int commandNumber, String command) {
-        this.command = command;
+        String[] commandAndModifier = command.split(" ");
         this.commandNumber = commandNumber;
+        this.command = commandAndModifier[0].trim();
+        if(commandAndModifier.length > 1) {
+            this.commandImm = Integer.parseInt(commandAndModifier[1].trim());
+        }
+        if(commandAndModifier.length > 2) {
+            this.commandEtiq = Integer.parseInt(commandAndModifier[2].trim());
+        }
+    }
+
+    public String toString() {
+//
+        return commandNumber + " " + command.trim() + " " + commandImm + " " + commandEtiq;
     }
 
 }

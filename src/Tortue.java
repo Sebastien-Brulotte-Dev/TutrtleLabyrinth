@@ -1,13 +1,15 @@
 
-public class Tortue {
+public class Tortue{
 
-    private Vecteur position;
-    private Direction direction;
+    public Processeur processeur;
+    public Vecteur position;
+    public Direction direction;
 
-    public Tortue(Vecteur position) {
+    public Tortue(Vecteur position, Labyrinthe labyrinthe) {
         this.position = position;
         this.direction = Direction.Nord;
     }
+    public Tortue() {}
 
     public Vecteur getPosition() {
         return position;
@@ -25,12 +27,13 @@ public class Tortue {
     public void turnRight() {
     }
     public void moveForward() {
+        position = position.add(direction.getVecteurDeplacement());
     }
     public static void readProgram() {
     }
     public void ececuteProgram() {
     }
-    public void setPosition(int x, int y){
-        position = new Vecteur(x, y);
+    public void setPosition(Vecteur position) {
+        this.position = position;
     }
 }

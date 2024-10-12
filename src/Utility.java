@@ -38,7 +38,7 @@ public class Utility {
     }
 
     public static boolean isLowerCaseLetter(char ch) {
-        return (int) ch > 97 && (int)ch < 122;
+        return ((int) ch >= 97 && (int)ch <= 122);
     }
 
     /**
