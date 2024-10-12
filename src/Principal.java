@@ -20,10 +20,6 @@ public class Principal {
 
         System.out.println( labyrinthe );
 
-//        clavier.close();
-
-
-
         Scanner clavier2 = new Scanner( System.in );
 
         System.out.print( "Entrez le nom du fichier contenant le programme a executer : " );
@@ -40,11 +36,6 @@ public class Principal {
 
 //        clavier2.close();
 
-
-
-
-        Tortue tortue = new Tortue();
-
         System.out.print( "Entrez la position X de depart de la tortue : " );
 //        int positionX = clavier.nextInt();
         int positionX = 0;
@@ -53,8 +44,7 @@ public class Principal {
 //        int positionY = clavier.nextInt();
         int positionY = 0;
 
-        tortue.setPosition(positionX, positionY);
-        System.out.println( tortue );
+        Tortue tortue = new Tortue(new Vecteur(positionX, positionY));
 
         clavier.close();
     }

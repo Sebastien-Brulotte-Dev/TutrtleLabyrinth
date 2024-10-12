@@ -41,11 +41,13 @@ public class Lecteurs {
         return resultat;
 
     }
+
     public static String lireCommande( Scanner entrees ) throws Exception {
         String prochaineCommande = null;
 
         try {
               prochaineCommande = entrees.useDelimiter("\\n").next();
+
 
         } catch( NoSuchElementException e ) {
             System.err.println( "Lecteurs::lireCommandes : Ne peu lire de commande car il n'y a plus d'entrees.");
@@ -57,8 +59,7 @@ public class Lecteurs {
             System.err.println( "Lecteurs::lireEntier : Ne peu lire un entier car le texte ne represente pas un entier.");
             System.exit( -1 );
         }
-
         return prochaineCommande;
-
     }
+
 }
